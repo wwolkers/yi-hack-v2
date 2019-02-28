@@ -87,6 +87,8 @@ ftp://IP_ADDRESS/tmp/eventd/event_motion.mp4 to check for movements
 
 See the script in iobroker/SendMessageToTelegramIfBabyCryDetected.js to check how it can be used to send baby cries to telegram with ioBroker. You need to install the Telegram Adapter and activate a bot as well.
 
+You need the following npm modules enabled: jsftp, fs, path
+![Alt text](js_modules.png?raw=true "FTP Events")
 
 
 How it works ?
