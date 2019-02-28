@@ -3,9 +3,8 @@ Use Xiaomi Yi Ants Camera 2 (EU) in combination with ioBroker to send motion or 
 
 ![Alt text](telegram_yi_camera.png?raw=true "FTP Events")
 
-===============
 this is based on the out dated yi-hack-v2 project (http://github.com/niclet/yi-hack-v2.git)
-===============
+
 
 Purpose
 =======
@@ -79,8 +78,11 @@ Use with ioBroker
 =============
 
 Simply check the FTP Server for file changes in:
+
 ftp://IP_ADDRESS/tmp/eventd/event_child_cry.mp4 to check for baby cry
+
 or
+
 ftp://IP_ADDRESS/tmp/eventd/event_motion.mp4 to check for movements
 
 ![Alt text](ftp_folder.png?raw=true "FTP Events")
