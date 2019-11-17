@@ -1,0 +1,6 @@
+# 'cloud' software
+/home/web/ipc
+
+#IR
+/bak/usr/script/ircut close
+/bak/usr/script/ircut open
