@@ -20,12 +20,13 @@ This camera has the default following features :
 * send video data over the network on Chinese servers in the cloud to allow people to view camera data from their smartphone wherever they are.
 * setup thanks to a smartphone application.
 * local video storage on a SD card
-* no RTSP server
+* RTSP server
 
 This hack includes :
 * Base firmware : 2.1.1_20171024151200 EU (Check with app if your device has the same firmware, if not replace)
 * Telnet server activated
 * FTP server activated
+* ssh server
 
 
 Installation on the YI camera

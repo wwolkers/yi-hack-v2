@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ARCHIVE=live.2019.11.11.tar.gz
+SCRIPT_DIR=$(cd `dirname $0` && pwd)
+cd $SCRIPT_DIR
+
+rm -rf ./_install
+rm -rf ./live
+
+if [ ! -f $ARCHIVE ]; then
+    wget http://www.live555.com/liveMedia/public/$ARCHIVE
+fi
+tar zxvf $ARCHIVE
+
+patch -p0 < rRTSPServer.patch
+
+cd live || exit 1
+
+./genMakefiles linux-cross
+chmod 644 Makefile*
+cp ../Makefile.rRTSPServer Makefile

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(cd `dirname $0` && pwd)
+cd $SCRIPT_DIR
+
+
+cd uclibc-ng
+
+make -j$(nproc) CROSS_COMPILE=arm-linux-gnueabihf- ARCH=armv7-a || exit 1
+make install || exit 1

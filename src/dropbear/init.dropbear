@@ -1,0 +1,23 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(cd `dirname $0` && pwd)
+cd $SCRIPT_DIR
+
+rm -rf ./_install
+
+cd dropbear
+git reset --hard 
+
+autoconf; autoheader || exit 1
+
+./configure CC=arm-linux-gnueabihf-gcc \
+    --prefix=$SCRIPT_DIR/_install \
+    USER_CFLAGS="-mcpu=cortex-a7 -mfpu=neon-vfpv4 -nostdinc -I/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/arm-linux-gnueabihf/libc/usr/include -L/opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/arm-linux-gnueabihf/libc/lib/arm-linux-gnueabihf" \
+    AR=arm-linux-gnueabihf-ar \
+    RANLIB=arm-linux-gnueabihf-ranlib \
+    --host=arm \
+    --disable-zlib \
+    || exit 1
+
+cp ../localoptions.h ./ || exit 1
+

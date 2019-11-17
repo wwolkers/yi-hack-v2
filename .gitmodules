@@ -1,0 +1,3 @@
+[submodule "src/uClibc-ng/uclibc-ng"]
+	path = src/uClibc-ng/uclibc-ng
+	url = https://git.uclibc-ng.org/git/uclibc-ng.git
